@@ -13,7 +13,6 @@ class Button {
     this.paint(25);
   }
 
-
   paint(level) {
     const background = `hsl(${this.hue}, 100%, ${level}%)`;
     this.el.style.backgroundColor = background;
@@ -25,6 +24,7 @@ class Button {
     this.paint(25);
   }
 
+  // Work around Safari's rule to only play sounds if given permission.
   async play(volume = 1.0) {
     this.sound.volume = volume;
     await new Promise((resolve) => {
@@ -123,11 +123,11 @@ class Game {
 
   getRandomButton() {
     let buttons = Array.from(this.buttons.values());
-    return buttons[Math.floow(Math.random() * this.buttons.size)];
+    return buttons[Math.floor(Math.random() * this.buttons.size)];
   }
 
   saveScore(score) {
-    const userNmae = this.getPlayerName();
+    const userName = this.getPlayerName();
     let scores = [];
     const scoresText = localStorage.getItem('scores');
     if (scoresText) {
@@ -138,9 +138,10 @@ class Game {
     localStorage.setItem('scores', JSON.stringify(scores));
   }
 
-  updateScores(userNmae, score, scores) {
+  updateScores(userName, score, scores) {
     const date = new Date().toLocaleDateString();
     const newScore = { name: userName, score: score, date: date };
+
     let found = false;
     for (const [i, prevScore] of scores.entries()) {
       if (score > prevScore.score) {
