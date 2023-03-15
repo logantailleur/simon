@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scores</title>
+    <title>About</title>
     <link rel="icon" href="favicon.ico" />
 
     <link rel="stylesheet" href="main.css" />
@@ -27,40 +27,41 @@
             <a class="nav-link" href="play.html">Play</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="scores.html">Scores</a>
+            <a class="nav-link" href="scores.html">Scores</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link active" href="about.html">About</a>
           </li>
         </menu>
       </nav>
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-      <table class="table table-warning table-striped-columns">
-        <thead class="table-dark">
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Score</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody id="scores"></tbody>
-      </table>
+      <div>
+        <p>
+          Simon is a repetitive memory game where you follow the demonstrated
+          color sequence until you make a mistake. The longer the sequence you
+          repeat, the greater your score.
+        </p>
+
+        <p>
+          The name Simon is a registered trademark owned by Milton-Bradley. Our
+          use of the name and the game is for non-profit educational use only.
+          No part of this code or program should be used outside of that
+          definition.
+        </p>
+      </div>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
       <div class="container-fluid">
-        <span class="text-reset">Author Name(s)</span>
+        <span class="text-reset">Logan Tailleur</span>
         <a
           class="text-reset"
-          href="https://github.com/logantailleur/simon/tree/first-simon-project"
+          href="https://github.com/logantailleur/simon"
           >Source</a
         >
       </div>
     </footer>
-
-    <script src="scores.js"></script>
   </body>
 </html>
