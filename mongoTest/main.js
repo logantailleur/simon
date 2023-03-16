@@ -1,13 +1,13 @@
 const { MongoClient } = require('mongodb');
 
 // Read the credentials from environment variables so that you do not accidentally check in your credentials
-const userName = process.env.MONGOUSER;
-const password = process.env.MONGOPASSWORD;
-const hostname = process.env.MONGOHOSTNAME;
+// const userName = process.env.MONGOUSER;
+// const password = process.env.MONGOPASSWORD;
+// const hostname = process.env.MONGOHOSTNAME;
 
 async function main() {
   // Connect to the database cluster
-  const url = `mongodb+srv://default:default@cluster0.5b9eaif.mongodb.net/`;
+  const url = `mongodb+srv://logan:friedChicken@cluster0.5b9eaif.mongodb.net`;
   const client = new MongoClient(url);
   const collection = client.db('rental').collection('house');
 
